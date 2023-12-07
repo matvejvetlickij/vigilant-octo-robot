@@ -1,0 +1,9 @@
+    static var custom: AnyTransition {
+        modifier(
+            active: CustomTransitionViewModifier(scale: 2, rotation: 360),
+            identity: CustomTransitionViewModifier(scale: 1, rotation: 0))
+        .animation(.linear(duration: 5))
+    }
+    
+    static func custom(scale: CGFloat, rotation: Double) -> AnyTransition {
+        modifier(
